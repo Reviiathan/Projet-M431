@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bjapmyad3xbra"]
+
+[ext_resource type="Script" uid="uid://dp4vrwsq3w786" path="res://kirby_with_gun.gd" id="1_wfnr8"]
+[ext_resource type="Texture2D" uid="uid://pjck7hinogjf" path="res://img/RidersKirby.webp" id="2_wfnr8"]
+[ext_resource type="Texture2D" uid="uid://bh25fsg8dy5up" path="res://img/pngimg.com - glock_PNG7.png" id="3_px5sl"]
+[ext_resource type="Script" uid="uid://cyvnni08abkug" path="res://gun.gd" id="4_wfnr8"]
+[ext_resource type="PackedScene" uid="uid://bj88gshk3dljr" path="res://background.tscn" id="5_px5sl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wa5vi"]
+radius = 72.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfnr8"]
+size = Vector2(66, 53)
+
+[node name="Node2D" type="Node2D" unique_id=812378558]
+position = Vector2(533, 300)
+
+[node name="kirbyWithGun" type="CharacterBody2D" parent="." unique_id=693577046]
+script = ExtResource("1_wfnr8")
+
+[node name="kirby" type="CharacterBody2D" parent="kirbyWithGun" unique_id=427203917]
+
+[node name="Sprite2D" type="Sprite2D" parent="kirbyWithGun/kirby" unique_id=732760861]
+position = Vector2(0.49997902, 0.5)
+scale = Vector2(0.10111465, 0.101132676)
+texture = ExtResource("2_wfnr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kirbyWithGun/kirby" unique_id=1724857194]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_wa5vi")
+
+[node name="gun" type="CharacterBody2D" parent="kirbyWithGun" unique_id=115684382]
+position = Vector2(16, -53)
+script = ExtResource("4_wfnr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kirbyWithGun/gun" unique_id=537356815]
+position = Vector2(25, -19.5)
+shape = SubResource("RectangleShape2D_wfnr8")
+
+[node name="Sprite2D" type="Sprite2D" parent="kirbyWithGun/gun" unique_id=1956187987]
+position = Vector2(24.000027, -18)
+scale = Vector2(0.040875774, 0.049212605)
+texture = ExtResource("3_px5sl")
+
+[node name="Node2D" type="Node2D" parent="kirbyWithGun/gun" unique_id=1015119530]
+position = Vector2(59, -36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kirbyWithGun" unique_id=789664747]
+
+[node name="Camera2D" type="Camera2D" parent="kirbyWithGun" unique_id=533999283]
+
+[node name="Node2D" parent="." unique_id=1963370099 instance=ExtResource("5_px5sl")]
+position = Vector2(-628, -484)

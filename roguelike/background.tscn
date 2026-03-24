@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bj88gshk3dljr"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i7s6n"]
+load_path = "res://.godot/imported/Capture d'écran 2026-03-24 112107.png-7a7ea57e64a260685f13edb537c4ed73.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=1963370099]
+
+[node name="ForestTopDown2dGameTileset2" type="Sprite2D" parent="." unique_id=801832853]
+z_index = -10
+position = Vector2(671, 517.6331)
+scale = Vector2(2.3717177, 2.1778898)
+texture = SubResource("CompressedTexture2D_i7s6n")
+region_enabled = true
+region_rect = Rect2(0, 0, 600, 600)
